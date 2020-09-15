@@ -7,11 +7,9 @@ public class Book {
     private String isbn;
     private String publisher;
     private int year;
-    private String author;
+    private Author author;
 
-    // This only shows on FeatureA branch
-
-    public Book(String title, String isbn, String publisher, int year, String author) {
+    public Book(String title, String isbn, String publisher, int year, Author author) {
         this.title = title;
         this.isbn = isbn;
         this.publisher = publisher;
@@ -35,28 +33,12 @@ public class Book {
         return year;
     }
 
-    public String getAuthor() {
+    public Author getAuthor() {
         return author;
     }
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
-    }
-
-    public void setPublisher(String publisher) {
-        this.publisher = publisher;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
     }
 
     @Override
@@ -66,7 +48,7 @@ public class Book {
                 ", isbn='" + isbn + '\'' +
                 ", publisher='" + publisher + '\'' +
                 ", year=" + year +
-                ", author='" + author + '\'' +
+                ", author=" + author +
                 '}';
     }
 

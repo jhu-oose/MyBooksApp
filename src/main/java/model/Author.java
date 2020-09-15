@@ -1,8 +1,10 @@
 package model;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Author {
+    private int id;
     private String name;
     private int numOfBooks;
     private String nationality;
@@ -18,23 +20,29 @@ public class Author {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Author author = (Author) o;
-        return numOfBooks == author.numOfBooks &&
+        return id == author.id &&
+                numOfBooks == author.numOfBooks &&
                 Objects.equals(name, author.name) &&
                 Objects.equals(nationality, author.nationality);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, numOfBooks, nationality);
+        return Objects.hash(id, name, numOfBooks, nationality);
     }
 
     @Override
     public String toString() {
         return "Author{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", numOfBooks=" + numOfBooks +
                 ", nationality='" + nationality + '\'' +
                 '}';
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setName(String name) {
@@ -47,6 +55,10 @@ public class Author {
 
     public void setNationality(String nationality) {
         this.nationality = nationality;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getName() {
