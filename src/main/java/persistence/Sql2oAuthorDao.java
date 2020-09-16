@@ -14,12 +14,6 @@ public class Sql2oAuthorDao implements AuthorDao {
     }
 
 
-    /**
-     *
-     * @param author
-     * @return -1 if an author with the same name exists, otherwise id of successfully added author.
-     * @throws DaoException
-     */
     @Override
     public int add(Author author) throws DaoException {
         try (Connection con = sql2o.open()) {
