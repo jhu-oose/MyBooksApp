@@ -21,7 +21,7 @@ public class TestBasicPersistence {
     }
 
     @Test
-    public void authorPersistenceTest() throws IOException {
+    public void testAuthorPersistence() throws IOException {
         p = new AuthorPersister();
         p.serialize(a1);
         a2 = p.deserialize();
@@ -31,7 +31,7 @@ public class TestBasicPersistence {
     }
 
     @Test
-    public void propertyAuthorPersistenceTest() throws IOException {
+    public void testPropertyAuthorPersistence() throws IOException {
         p = new PropertyAuthorPersister();
         p.serialize(a1);
         a2 = p.deserialize();
@@ -41,7 +41,7 @@ public class TestBasicPersistence {
     }
 
     @Test
-    public void gsonAuthorPersistenceTest() throws IOException {
+    public void testGsonAuthorPersistence() throws IOException {
         p = new GsonAuthorPersister();
         p.serialize(a1);
         a2 = p.deserialize();
