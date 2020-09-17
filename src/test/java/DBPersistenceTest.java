@@ -8,7 +8,7 @@ import java.sql.*;
 import static org.junit.Assert.*;
 
 
-public class TestDBPersistence {
+public class DBPersistenceTest {
 
     private static String URI;
     private static Connection conn;
