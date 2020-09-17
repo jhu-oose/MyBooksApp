@@ -33,7 +33,7 @@ public class TestDBPersistence {
     }
 
     @Test
-    public void insertAuthorTest1() throws SQLException {
+    public void testInsertAuthor1() throws SQLException {
         String sql = "INSERT INTO Authors(id, name, numOfBooks, nationality)"+
                 "VALUES (NULL, 'George Orwell', 15, 'British');";
         assertFalse(st.execute(sql)); // false expected! check execute specs
@@ -43,7 +43,7 @@ public class TestDBPersistence {
     }
 
     @Test
-    public void insertAuthorTest2() throws SQLException {
+    public void testInsertAuthor2() throws SQLException {
         String sql = "INSERT INTO Authors(id, name, numOfBooks, nationality)"+
                 "VALUES (NULL, 'Emily St. John Mandel', 5, 'Canadian');";
         assertFalse(st.execute(sql)); // false expected! check execute specs
@@ -53,7 +53,7 @@ public class TestDBPersistence {
     }
 
     @Test
-    public void insertAuthorTest3() throws SQLException {
+    public void testInsertAuthor3() throws SQLException {
         String sql = "INSERT INTO Authors(id, name, numOfBooks, nationality)"+
                 "VALUES (NULL, 'J.D Salinger', 8, 'American');";
         assertFalse(st.execute(sql));
@@ -63,7 +63,7 @@ public class TestDBPersistence {
     }
 
     @Test
-    public void parameterizedInsertAuthorTest() throws SQLException {
+    public void testParameterizedInsertAuthor() throws SQLException {
         Author a = new Author ("Franz Kafka", 16, "Czechoslovakian");
         String sql = "INSERT INTO Authors (id, name, numOfBooks, nationality)"+
                                 "VALUES (NULL, ?, ?, ?);";
