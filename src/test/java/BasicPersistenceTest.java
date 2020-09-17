@@ -10,7 +10,7 @@ import java.io.IOException;
 
 import static org.junit.Assert.assertEquals;
 
-public class TestBasicPersistence {
+public class BasicPersistenceTest {
     private Persister<Author> p;
     private static Author a1;
     private static Author a2;
