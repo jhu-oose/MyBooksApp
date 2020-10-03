@@ -1,0 +1,30 @@
+#set( $title = "Welcome Page" )
+#parse("public/templates/top.vm")
+
+#if($username)
+<h1>Welcome to MyBooks App $username</h1>
+<div class="divContents indexLinkWrapper">
+    <p><a class="content indexLink" href="/authors">Show all authors</a></p>
+    <p><a class="content indexLink" href="/addauthor">Add author</a></p>
+</div>
+#else
+<h1>Please login first!</h1>
+<form action="/" method="post">
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" placeholder="username" name="username"/>
+    </div>
+    <div>
+        <label for="color">Choose your fav color:</label>
+        <select id="color" name="color">
+            <option value="blue">blue</option>
+            <option value="red">red</option>
+            <option value="green">green</option>
+            <option value="yellow">yellow</option>
+        </select>
+    </div>
+    <button>Submit</button>
+</form>
+#end
+
+#parse("public/templates/bottom.vm")

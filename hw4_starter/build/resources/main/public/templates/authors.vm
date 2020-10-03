@@ -1,0 +1,17 @@
+#set( $title = "Authors List" )
+#parse("public/templates/top.vm")
+
+#if ($authors)
+<h1>List of the authors of your favorite books:</h1>
+<div class="divContents">
+    <ol>
+    <p>
+        #foreach($author in $authors )
+            <li class="content author"><i>$author.name</i> ($author.nationality) has published $author.numOfBooks books.</li>
+        #end
+        </p>
+    </ol>
+</div>
+#end
+
+#parse("public/templates/bottom.vm")
