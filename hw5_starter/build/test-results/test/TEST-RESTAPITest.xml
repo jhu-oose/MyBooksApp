@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RESTAPITest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-09-30T19:46:45" hostname="DESKTOP-K9BLV0I" time="0.095">
+  <properties/>
+  <testcase name="testListAuthors" classname="RESTAPITest" time="0.071"/>
+  <testcase name="testAddAuthor" classname="RESTAPITest" time="0.024"/>
+  <system-out><![CDATA[0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

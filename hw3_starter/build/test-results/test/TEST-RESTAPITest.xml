@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="RESTAPITest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-09-25T01:31:52" hostname="DESKTOP-K9BLV0I" time="0.087">
+<testsuite name="RESTAPITest" tests="6" skipped="0" failures="0" errors="0" timestamp="2020-10-03T04:25:29" hostname="DESKTOP-K9BLV0I" time="0.191">
   <properties/>
-  <testcase name="testListAuthors" classname="RESTAPITest" time="0.061"/>
-  <testcase name="testAddAuthor" classname="RESTAPITest" time="0.025"/>
+  <testcase name="testAddBook" classname="RESTAPITest" time="0.084"/>
+  <testcase name="testListAuthors" classname="RESTAPITest" time="0.005"/>
+  <testcase name="testDelAuthor" classname="RESTAPITest" time="0.058"/>
+  <testcase name="testListBooks" classname="RESTAPITest" time="0.005"/>
+  <testcase name="testAddAuthor" classname="RESTAPITest" time="0.015"/>
+  <testcase name="testDelBook" classname="RESTAPITest" time="0.021"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

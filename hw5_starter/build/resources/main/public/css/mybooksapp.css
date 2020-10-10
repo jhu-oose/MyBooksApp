@@ -1,0 +1,64 @@
+h1 {
+    font-family: "Book Antiqua", serif;
+    font-style: italic;
+    padding: 10px;
+}
+.divContents, form{
+    background: #566573;
+    text-align: left;
+    border-radius: 9px;
+    padding: 10px 30px 10px 30px;
+    float: left;
+}
+.indexLinkWrapper {
+    margin-left: 10px;
+}
+.content {
+    color: #F1C40F;
+    font-family: Bahnschrift, serif;
+}
+
+.indexLink {
+    font-size: 27px;
+}
+
+.author {
+    padding: 7px;
+    font-size: 18px;
+}
+
+#divSubmit {
+    text-align: center;
+}
+
+.submit {
+    background: #273746 ;
+    color: #F1C40F;
+    font-family: "Book Antiqua", serif ;
+    font-weight: bolder;
+    font-size: 30px;
+    padding: 0 40px 0 40px;
+    border-radius: 0 16px 0 16px;
+}
+
+form label {
+    padding: 22px;
+    font-size: 20px;
+}
+
+form input[type=text], input[type=number] {
+    padding: 10px;
+    margin: 10px;
+    font-family: "Book Antiqua", serif;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+ol li button{
+    color: red;
+    border-radius: 50%;
+    font-weight: bold;
+    border: 2px solid red;
+}
+

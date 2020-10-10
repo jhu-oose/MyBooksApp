@@ -41,7 +41,31 @@ public class Sql2oAuthorDao implements AuthorDao {
         }
     }
 
-    // TODO: Add "delete" method from hw2 here; feel free to add more methods
+    @Override
+    public boolean update(Author author) throws DaoException {
+        String sql = "Update Authors SET name = :name, numOfBooks = :numOfBooks, " +
+                "nationality = :nationality WHERE name = :name";
+        try (Connection con = sql2o.open()) {
+            con.createQuery(sql).bind(author)
+                    .executeUpdate();
+            return true;
+        }
+        catch (Sql2oException ex) {
+            throw new DaoException();
+        }
+    }
+    @Override
+    public boolean delete(Author author) throws DaoException {
+        String sql = "DELETE FROM Authors WHERE name =:name";
+        try (Connection con = sql2o.open()) {
+            con.createQuery(sql).bind(author)
+                    .executeUpdate();
+            return true;
+        }
+        catch (Sql2oException ex) {
+            throw new DaoException();
+        }
+    }
 
 
 }

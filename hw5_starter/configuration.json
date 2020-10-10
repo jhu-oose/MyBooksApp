@@ -1,0 +1,9 @@
+{
+    "database": {
+      "students": 1,
+      "assignments": 2,
+      "feedbacks": 3,
+      "groups": 4,
+      "iterations": 5
+    }
+  }

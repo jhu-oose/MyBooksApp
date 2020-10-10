@@ -1,0 +1,30 @@
+#set( $title = "Add Author" )
+#parse("public/templates/top.vm")
+
+#if($added)
+<h2>Author was successfully added!</h2>
+<br />
+#end
+
+#if($failedAdd)
+<h2>Failed to add the Author!</h2>
+<br />
+#end
+
+<h2>Add a new author</h2>
+<form action="/addauthor" method="post" class="content">
+    <label for="name">Name: </label>
+    <input type="text" name="name" placeholder="name" id="name" required>
+    <br />
+    <label for="nationality">Nationality: </label>
+    <input type="text" name="nationality" placeholder="nationality" id="nationality" />
+    <br />
+    <label for="numOfBooks">Number of books: </label>
+    <input type="number" name="numOfBooks" placeholder="1" id="numOfBooks" min="1" max="200"/>
+    <br />
+    <div id="divSubmit">
+        <input type="submit" value="Add" class="submit" />
+    </div>
+</form>
+
+#parse("public/templates/bottom.vm")

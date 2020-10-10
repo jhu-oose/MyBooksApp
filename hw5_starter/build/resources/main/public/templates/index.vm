@@ -1,0 +1,24 @@
+#set( $title = "Welcome Page" )
+#parse("public/templates/top.vm")
+
+#if($username)
+<h1>Welcome to MyBooks App $username</h1>
+<div class="divContents indexLinkWrapper">
+    <p><a class="content indexLink" href="/authors">Show all authors</a></p>
+    <p><a class="content indexLink" href="/addauthor">Add author</a></p>
+</div>
+#else
+<h1>Please login first!</h1>
+<form action="/" method="post" class="content" onsubmit="return validateUsername();">
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" placeholder="username" name="username" id="username" />
+    </div>
+    <div id="divSubmit">
+        <input type="submit" value="Sign in" class="submit" />
+    </div>
+</form>
+<script src="js/validate.js"></script>
+#end
+
+#parse("public/templates/bottom.vm")
